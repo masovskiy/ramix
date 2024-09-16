@@ -2,16 +2,73 @@
     {
         "title": "Атака титанов",
         "description": "Человечество против гигантских титанов.",
-        "image": "https://example.com/images/attack-on-titan.jpg"
+        "year": 2013,
+        "genres": ["action", "fantasy"],
+        "image": "https://cdn.myanimelist.net/images/anime/10/47347.jpg",
+        "link": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin"
     },
     {
         "title": "Наруто",
         "description": "История юного ниндзя, стремящегося стать Хокаге.",
-        "image": "https://example.com/images/naruto.jpg"
+        "year": 2002,
+        "genres": ["action", "adventure"],
+        "image": "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
+        "link": "https://myanimelist.net/anime/20/Naruto"
     },
     {
         "title": "Моя геройская академия",
         "description": "Мир, где люди рождаются с суперсилами.",
-        "image": "https://example.com/images/my-hero-academia.jpg"
+        "year": 2016,
+        "genres": ["action", "comedy"],
+        "image": "https://cdn.myanimelist.net/images/anime/10/78745.jpg",
+        "link": "https://myanimelist.net/anime/31964/Boku_no_Hero_Academia"
+    },
+    {
+        "title": "One Piece",
+        "description": "Приключения пиратов в поисках легендарного сокровища.",
+        "year": 1999,
+        "genres": ["action", "adventure", "fantasy"],
+        "image": "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
+        "link": "https://myanimelist.net/anime/21/One_Piece"
+    },
+    {
+        "title": "Демон-убийца: Клинок, рассекающий демонов",
+        "description": "Мальчик ищет способ исцелить свою сестру и отомстить демонам.",
+        "year": 2019,
+        "genres": ["action", "fantasy"],
+        "image": "https://cdn.myanimelist.net/images/anime/1286/99889.jpg",
+        "link": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba"
+    },
+    {
+        "title": "Семь смертных грехов",
+        "description": "Легендарные рыцари, обвинённые в заговоре, должны доказать свою невиновность.",
+        "year": 2014,
+        "genres": ["action", "adventure", "fantasy"],
+        "image": "https://cdn.myanimelist.net/images/anime/8/65409.jpg",
+        "link": "https://myanimelist.net/anime/23755/Nanatsu_no_Taizai"
+    },
+    {
+        "title": "Токийский гуль",
+        "description": "Человек превращается в монстра после нападения гулей.",
+        "year": 2014,
+        "genres": ["action", "horror", "supernatural"],
+        "image": "https://cdn.myanimelist.net/images/anime/5/64449.jpg",
+        "link": "https://myanimelist.net/anime/22319/Tokyo_Ghoul"
+    },
+    {
+        "title": "Судьба: Начало",
+        "description": "Маги борются за право использовать священный Грааль.",
+        "year": 2011,
+        "genres": ["action", "fantasy", "supernatural"],
+        "image": "https://cdn.myanimelist.net/images/anime/7/73274.jpg",
+        "link": "https://myanimelist.net/anime/10087/Fate_Zero"
+    },
+    {
+        "title": "Sword Art Online",
+        "description": "Игроки MMORPG попадают в ловушку виртуального мира.",
+        "year": 2012,
+        "genres": ["action", "adventure", "fantasy"],
+        "image": "https://cdn.myanimelist.net/images/anime/11/39717.jpg",
+        "link": "https://myanimelist.net/anime/11757/Sword_Art_Online"
     }
 ]
