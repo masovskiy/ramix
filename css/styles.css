@@ -180,3 +180,37 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Уменьшение размера шрифта заголовка на мобильных устройствах */
+    }
+
+    #about, #anime-section, #developers {
+        padding: 1rem; /* Уменьшение отступов секций */
+    }
+
+    #anime-grid {
+        grid-template-columns: 1fr; /* Один столбец для мобильных устройств */
+    }
+
+    #search-bar, #genre-filter {
+        width: 100%; /* Полная ширина для форм */
+        max-width: none; /* Убрать ограничение ширины */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Ещё большее уменьшение размера шрифта заголовка на очень маленьких экранах */
+    }
+
+    #anime-grid {
+        grid-template-columns: 1fr; /* Один столбец для маленьких экранов */
+    }
+
+    #search-bar, #genre-filter {
+        padding: 0.5rem; /* Уменьшение отступов в формах */
+    }
+}
