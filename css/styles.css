@@ -13,10 +13,11 @@ body {
 
 /* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон для header */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон для header */
     text-align: center;
     padding: 2rem 0;
     border-bottom: 3px solid #ff66b2; /* Японско-розовая линия */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Легкая тень для header */
 }
 
 h1 {
@@ -25,25 +26,25 @@ h1 {
     margin: 0;
     font-family: 'Press Start 2P', sans-serif;
     letter-spacing: 3px;
-    text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2;
-    animation: rainbowGlow 5s infinite; /* Радужная анимация */
+    text-shadow: 0 0 15px #ff66b2, 0 0 25px #ff66b2; /* Радужный эффект */
+    animation: rainbowGlow 5s linear infinite; /* Радужная анимация */
 }
 
 .subheader {
     font-size: 1.2rem;
     color: #ffffff;
     margin-top: 0.5rem;
-    text-shadow: 0 0 10px #ff66b2;
+    text-shadow: 0 0 15px #ff66b2;
 }
 
 /* Анимация радуги для заголовка */
 @keyframes rainbowGlow {
-    0% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
-    20% { color: #ffdd33; text-shadow: 0 0 10px #ffdd33; }
-    40% { color: #33ffdd; text-shadow: 0 0 10px #33ffdd; }
-    60% { color: #dd33ff; text-shadow: 0 0 10px #dd33ff; }
-    80% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6; }
-    100% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
+    0% { color: #ff66b2; text-shadow: 0 0 15px #ff66b2; }
+    20% { color: #ffdd33; text-shadow: 0 0 15px #ffdd33; }
+    40% { color: #33ffdd; text-shadow: 0 0 15px #33ffdd; }
+    60% { color: #dd33ff; text-shadow: 0 0 15px #dd33ff; }
+    80% { color: #ff4da6; text-shadow: 0 0 15px #ff4da6; }
+    100% { color: #ff66b2; text-shadow: 0 0 15px #ff66b2; }
 }
 
 /* Секции контента */
@@ -54,7 +55,7 @@ h1 {
     background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон для секций */
     border-radius: 12px;
     border: 2px solid #ff66b2; /* Японско-розовая рамка */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Усиленная тень для секций */
 }
 
 h2 {
@@ -63,7 +64,7 @@ h2 {
     margin-bottom: 1rem;
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;
-    text-shadow: 0 0 10px #ff66b2;
+    text-shadow: 0 0 15px #ff66b2;
 }
 
 p {
@@ -84,14 +85,14 @@ p {
     background: #1a1a1a; /* Тёмный фон для карточки */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Усиленная тень для карточек */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
 }
 
 .anime-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9); /* Усиленная тень при наведении */
     border-color: #ff66b2; /* Розовый цвет при наведении */
 }
 
@@ -103,7 +104,7 @@ p {
 }
 
 .anime-card img:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
@@ -152,6 +153,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Тень для футера */
 }
 
 footer p {
