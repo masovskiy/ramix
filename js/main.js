@@ -47,29 +47,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Фильтрация по жанрам
-document.addEventListener('DOMContentLoaded', function () {
-    const searchBar = document.getElementById('search-bar');
-    const genreFilter = document.getElementById('genre-filter');
-    const animeCards = document.querySelectorAll('.anime-card');
+   // Фильтрация по жанрам
+     genreFilter.addEventListener("change", function () {
+         const selectedGenre = genreFilter.value;
 
-    function filterAnime() {
-        const searchTerm = searchBar.value.toLowerCase();
-        const selectedGenre = genreFilter.value;
-
-        animeCards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const genre = card.dataset.genre;
-
-            const matchesSearch = title.includes(searchTerm);
-            const matchesGenre = selectedGenre === '' || genre === selectedGenre;
-
-            if (matchesSearch && matchesGenre) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
+         if (selectedGenre === "all") {
+             displayAnime(animeList);
+         } else {
+             const filteredAnime = animeList.filter(anime =>
+                 anime.genres.includes(selectedGenre)
+             );
+             displayAnime(filteredAnime);
+         }
+     });
 
     searchBar.addEventListener('input', filterAnime);
     genreFilter.addEventListener('change', filterAnime);
