@@ -118,7 +118,7 @@ p {
 }
 
 /* Форма поиска и фильтрации */
-#search-bar, #genre-filter {
+#search-bar {
     margin-bottom: 1.5rem;
     padding: 0.7rem;
     border: 1px solid #ff66b2;
@@ -128,6 +128,7 @@ p {
     background-color: #1a1a1a;
     color: #ffffff;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 #search-bar::placeholder {
@@ -137,6 +138,21 @@ p {
 /* Фильтр по жанру */
 #genre-filter {
     margin-bottom: 2rem;
+    padding: 0.7rem;
+    border: 1px solid #ff66b2;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#genre-filter option {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
 
 /* Секция разработчиков */
