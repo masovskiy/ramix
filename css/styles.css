@@ -3,72 +3,76 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Глубокий черный фон */
+    background-color: #0a0a0a; /* Глубокий черный фон */
     color: #ffffff;
-    background-image: url('https://wallpapercave.com/wp/wp2892271.jpg'); /* Японский фон в розовых оттенках */
+    background-image: url('https://wallpapercave.com/wp/wp2754319.jpg'); /* Японский розовый стиль фона */
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 /* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный */
     text-align: center;
     padding: 2rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid #ff4da6; /* Японско-розовая линия */
+    border-bottom: 3px solid #ff66b2; /* Розовый акцент */
 }
 
 h1 {
     font-size: 4rem;
-    color: #ff4da6; /* Яркий японский розовый */
+    color: #ff66b2; /* Японско-розовый */
     margin: 0;
     font-family: 'Press Start 2P', sans-serif;
     letter-spacing: 3px;
-    text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6;
-    animation: rainbowText 4s infinite; /* Радужная анимация заголовка */
-}
-
-@keyframes rainbowText {
-    0% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6; }
-    25% { color: #ffdd33; text-shadow: 0 0 10px #ffdd33; }
-    50% { color: #33ffdd; text-shadow: 0 0 10px #33ffdd; }
-    75% { color: #dd33ff; text-shadow: 0 0 10px #dd33ff; }
-    100% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6; }
+    text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2;
+    animation: rainbowGlow 5s infinite; /* Радужная анимация */
 }
 
 .subheader {
     font-size: 1.2rem;
-    color: #fff;
+    color: #ffffff;
     margin-top: 0.5rem;
-    text-shadow: 0 0 10px #ff4da6;
+    text-shadow: 0 0 10px #ff66b2;
 }
 
+/* Анимация радуги для заголовка */
+@keyframes rainbowGlow {
+    0% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
+    20% { color: #ffdd33; text-shadow: 0 0 10px #ffdd33; }
+    40% { color: #33ffdd; text-shadow: 0 0 10px #33ffdd; }
+    60% { color: #dd33ff; text-shadow: 0 0 10px #dd33ff; }
+    80% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6; }
+    100% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
+}
+
+/* Секции контента */
 #about, #anime-section, #developers {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 12px;
-    border: 2px solid #ff4da6;
+    border: 2px solid #ff66b2; /* Японско-розовая рамка */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #ff4da6;
+    color: #ff66b2;
     margin-bottom: 1rem;
     text-align: center;
-    letter-spacing: 1px;
     font-family: 'Press Start 2P', sans-serif;
-    text-shadow: 0 0 10px #ff4da6;
+    text-shadow: 0 0 10px #ff66b2;
 }
 
 p {
     font-size: 1.1rem;
     line-height: 1.8;
+    color: #e0e0e0;
 }
 
+/* Сетка аниме-карточек */
 #anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -77,7 +81,7 @@ p {
 }
 
 .anime-card {
-    background: #1e1e1e;
+    background: #1a1a1a; /* Тёмный фон для карточки */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
@@ -88,7 +92,7 @@ p {
 .anime-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
-    border-color: #ff4da6; /* Розовый цвет при наведении */
+    border-color: #ff66b2; /* Розовый цвет при наведении */
 }
 
 .anime-card img {
@@ -106,27 +110,21 @@ p {
 .anime-card h3 {
     text-align: center;
     font-size: 1.6rem;
-    color: #ff4da6;
+    color: #ff66b2;
     margin: 0.5rem 0;
     font-family: 'Roboto', sans-serif;
 }
 
-.anime-card p {
-    padding: 0 1rem;
-    font-size: 1rem;
-    color: #cfcfcf;
-}
-
-/* Стили для формы поиска */
+/* Форма поиска */
 #search-bar, #genre-filter {
     margin-bottom: 1.5rem;
     padding: 0.7rem;
-    border: 1px solid #ff4da6;
+    border: 1px solid #ff66b2;
     border-radius: 4px;
     width: 100%;
     max-width: 400px;
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #ffffff;
     box-sizing: border-box;
 }
 
@@ -134,7 +132,7 @@ p {
     color: #cfcfcf;
 }
 
-/* Секция о разработчиках */
+/* Секция разработчиков */
 #developers ul {
     list-style-type: none;
     padding-left: 0;
@@ -142,7 +140,7 @@ p {
 
 #developers li::before {
     content: "• ";
-    color: #ff4da6;
+    color: #ff66b2;
 }
 
 footer {
@@ -158,23 +156,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-/* Анимации */
-header h1 {
-    animation: glow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6, 0 0 30px #ff4da6;
-    }
-    to {
-        text-shadow: 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
-    }
-}
-
-.anime-card img:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
 }
