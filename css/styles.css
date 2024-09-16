@@ -36,6 +36,27 @@ h1, h2 {
     color: #6200ea;
 }
 
+#search-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#genre-filter {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 #anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -63,4 +84,25 @@ h1, h2 {
 .anime-card h3 {
     padding: 10px;
     margin: 0;
+}
+
+.anime-card p {
+    padding: 0 10px 10px 10px;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    #search-section {
+        flex-direction: column;
+    }
+
+    #search-bar, #genre-filter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #anime-grid {
+        grid-template-columns: 1fr;
+    }
 }
