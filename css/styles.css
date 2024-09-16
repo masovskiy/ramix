@@ -209,6 +209,71 @@ footer p {
     #anime-grid {
         grid-template-columns: 1fr; /* Один столбец для маленьких экранов */
     }
+/* Добавление стилей для формы отзывов */
+#reviews {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон */
+    border-radius: 12px;
+    border: 2px solid #ff66b2; /* Японско-розовая рамка */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Усиленная тень */
+}
+
+#reviews h2 {
+    font-size: 2.5rem;
+    color: #ff66b2;
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#review-form {
+    margin-top: 1.5rem;
+}
+
+#review-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.7rem;
+    border: 1px solid #ff66b2;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#review-form button {
+    background-color: #ff66b2;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#review-form button:hover {
+    background-color: #e05a8e;
+}
+
+#reviews-list {
+    margin-top: 2rem;
+}
+
+.review {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #ff66b2;
+}
+
+.review p {
+    margin: 0;
+    color: #ffffff;
+}
 
     #search-bar, #genre-filter {
         padding: 0.5rem; /* Уменьшение отступов в формах */
