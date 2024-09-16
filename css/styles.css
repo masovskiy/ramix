@@ -13,11 +13,10 @@ body {
 
 /* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон для header */
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон для header */
     text-align: center;
     padding: 2rem 0;
     border-bottom: 3px solid #ff66b2; /* Японско-розовая линия */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Легкая тень для header */
 }
 
 h1 {
@@ -26,36 +25,36 @@ h1 {
     margin: 0;
     font-family: 'Press Start 2P', sans-serif;
     letter-spacing: 3px;
-    text-shadow: 0 0 15px #ff66b2, 0 0 25px #ff66b2; /* Радужный эффект */
-    animation: rainbowGlow 5s linear infinite; /* Радужная анимация */
+    text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2;
+    animation: rainbowGlow 5s infinite; /* Радужная анимация */
 }
 
 .subheader {
     font-size: 1.2rem;
     color: #ffffff;
     margin-top: 0.5rem;
-    text-shadow: 0 0 15px #ff66b2;
+    text-shadow: 0 0 10px #ff66b2;
 }
 
 /* Анимация радуги для заголовка */
 @keyframes rainbowGlow {
-    0% { color: #ff66b2; text-shadow: 0 0 15px #ff66b2; }
-    20% { color: #ffdd33; text-shadow: 0 0 15px #ffdd33; }
-    40% { color: #33ffdd; text-shadow: 0 0 15px #33ffdd; }
-    60% { color: #dd33ff; text-shadow: 0 0 15px #dd33ff; }
-    80% { color: #ff4da6; text-shadow: 0 0 15px #ff4da6; }
-    100% { color: #ff66b2; text-shadow: 0 0 15px #ff66b2; }
+    0% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
+    20% { color: #ffdd33; text-shadow: 0 0 10px #ffdd33; }
+    40% { color: #33ffdd; text-shadow: 0 0 10px #33ffdd; }
+    60% { color: #dd33ff; text-shadow: 0 0 10px #dd33ff; }
+    80% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6; }
+    100% { color: #ff66b2; text-shadow: 0 0 10px #ff66b2; }
 }
 
 /* Секции контента */
-#about, #anime-section, #developers {
+#about, #anime-section, #reviews, #developers {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон для секций */
     border-radius: 12px;
     border: 2px solid #ff66b2; /* Японско-розовая рамка */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Усиленная тень для секций */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
@@ -64,7 +63,7 @@ h2 {
     margin-bottom: 1rem;
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;
-    text-shadow: 0 0 15px #ff66b2;
+    text-shadow: 0 0 10px #ff66b2;
 }
 
 p {
@@ -81,19 +80,18 @@ p {
     margin-top: 1.5rem;
 }
 
-/* Карточки аниме */
 .anime-card {
     background: #1a1a1a; /* Тёмный фон для карточки */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Усиленная тень для карточек */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Плавное изменение обводки */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
 }
 
 .anime-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
     border-color: #ff66b2; /* Розовый цвет при наведении */
 }
 
@@ -105,7 +103,7 @@ p {
 }
 
 .anime-card img:hover {
-    opacity: 0.9;
+    opacity: 0.8;
     transform: scale(1.05);
 }
 
@@ -117,8 +115,8 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Форма поиска и фильтрации */
-#search-bar {
+/* Форма поиска и фильтрация */
+#search-bar, #genre-filter {
     margin-bottom: 1.5rem;
     padding: 0.7rem;
     border: 1px solid #ff66b2;
@@ -128,16 +126,87 @@ p {
     background-color: #1a1a1a;
     color: #ffffff;
     box-sizing: border-box;
-    font-size: 1rem;
 }
 
 #search-bar::placeholder {
     color: #cfcfcf;
 }
 
-/* Фильтр по жанру */
 #genre-filter {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Секция отзывов */
+#reviews {
+    background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон для отзывов */
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#review-text {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ff66b2;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+#review-text::placeholder {
+    color: #cfcfcf;
+}
+
+button {
+    background-color: #ff66b2; /* Японско-розовый */
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4da6; /* Тёмно-розовый при наведении */
+}
+
+#reviews-list {
+    margin-top: 2rem;
+}
+
+.review {
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон для отзыва */
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ff66b2; /* Японско-розовая рамка для отзыва */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.review p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #ff66b2;
+    margin-top: 0.5rem;
+}
+
+/* Форма поиска и фильтрация */
+#search-bar, #genre-filter {
+    margin-bottom: 1.5rem;
     padding: 0.7rem;
     border: 1px solid #ff66b2;
     border-radius: 4px;
@@ -146,13 +215,14 @@ p {
     background-color: #1a1a1a;
     color: #ffffff;
     box-sizing: border-box;
-    font-size: 1rem;
-    cursor: pointer;
 }
 
-#genre-filter option {
-    background-color: #1a1a1a;
-    color: #ffffff;
+#search-bar::placeholder {
+    color: #cfcfcf;
+}
+
+#genre-filter {
+    margin-bottom: 1.5rem;
 }
 
 /* Секция разработчиков */
@@ -183,99 +253,15 @@ footer p {
 
 /* Мобильная версия */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem; /* Уменьшение размера шрифта заголовка на мобильных устройствах */
-    }
-
-    #about, #anime-section, #developers {
-        padding: 1rem; /* Уменьшение отступов секций */
+    h1 {
+        font-size: 3rem;
     }
 
     #anime-grid {
-        grid-template-columns: 1fr; /* Один столбец для мобильных устройств */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
-    #search-bar, #genre-filter {
-        width: 100%; /* Полная ширина для форм */
-        max-width: none; /* Убрать ограничение ширины */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem; /* Ещё большее уменьшение размера шрифта заголовка на очень маленьких экранах */
-    }
-
-    #anime-grid {
-        grid-template-columns: 1fr; /* Один столбец для маленьких экранов */
-    }
-/* Добавление стилей для формы отзывов */
-#reviews {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон */
-    border-radius: 12px;
-    border: 2px solid #ff66b2; /* Японско-розовая рамка */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Усиленная тень */
-}
-
-#reviews h2 {
-    font-size: 2.5rem;
-    color: #ff66b2;
-    text-align: center;
-    font-family: 'Press Start 2P', sans-serif;
-}
-
-#review-form {
-    margin-top: 1.5rem;
-}
-
-#review-form textarea {
-    width: 100%;
-    height: 150px;
-    padding: 0.7rem;
-    border: 1px solid #ff66b2;
-    border-radius: 4px;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    box-sizing: border-box;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-#review-form button {
-    background-color: #ff66b2;
-    color: #ffffff;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-#review-form button:hover {
-    background-color: #e05a8e;
-}
-
-#reviews-list {
-    margin-top: 2rem;
-}
-
-.review {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border: 1px solid #ff66b2;
-}
-
-.review p {
-    margin: 0;
-    color: #ffffff;
-}
-
-    #search-bar, #genre-filter {
-        padding: 0.5rem; /* Уменьшение отступов в формах */
+    #review-text {
+        font-size: 0.9rem;
     }
 }
