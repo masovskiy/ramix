@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Атака титанов",
+        "description": "Человечество против гигантских титанов.",
+        "image": "https://example.com/images/attack-on-titan.jpg"
+    },
+    {
+        "title": "Наруто",
+        "description": "История юного ниндзя, стремящегося стать Хокаге.",
+        "image": "https://example.com/images/naruto.jpg"
+    },
+    {
+        "title": "Моя геройская академия",
+        "description": "Мир, где люди рождаются с суперсилами.",
+        "image": "https://example.com/images/my-hero-academia.jpg"
+    }
+]
