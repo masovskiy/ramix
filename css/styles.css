@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #000000; /* Глубокий черный фон */
     color: #ffffff;
-    background-image: url('https://wallpapercave.com/wp/wp13006911.png'); /* Фоновое изображение в японском стиле */
+    background-image: url('https://wallpapercave.com/wp/wp13006911.png'); /* Японское фоновое изображение */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -13,7 +13,7 @@ body {
 
 /* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон для header */
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон для header */
     text-align: center;
     padding: 2rem 0;
     border-bottom: 3px solid #ff66b2; /* Японско-розовая линия */
