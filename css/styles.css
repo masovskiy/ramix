@@ -3,9 +3,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a; /* Глубокий черный фон */
+    background-color: #000000; /* Глубокий черный фон */
     color: #ffffff;
-    background-image: url('https://wallpapercave.com/wp/wp13006911.png'); /* Японский розовый стиль фона */
+    background-image: url('https://wallpapercave.com/wp/wp13006911.png'); /* Фоновое изображение в японском стиле */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -13,10 +13,10 @@ body {
 
 /* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон для header */
     text-align: center;
     padding: 2rem 0;
-    border-bottom: 3px solid #ff66b2; /* Розовый акцент */
+    border-bottom: 3px solid #ff66b2; /* Японско-розовая линия */
 }
 
 h1 {
@@ -51,7 +51,7 @@ h1 {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон для секций */
     border-radius: 12px;
     border: 2px solid #ff66b2; /* Японско-розовая рамка */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
