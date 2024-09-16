@@ -5,14 +5,14 @@ body {
     padding: 0;
     background-color: #121212;
     color: #ffffff;
-    line-height: 1.6;
-    background-image: url('https://wallpapercave.com/wp/wp2754319.jpg'); /* Фон с японским и киберпанк стилем */
+    background-image: url('https://wallpapercave.com/wp/wp2754319.jpg'); /* Фон с японским стилем */
     background-size: cover;
     background-attachment: fixed;
 }
 
+/* Стили для заголовка */
 header {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     text-align: center;
     padding: 2rem 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
@@ -21,15 +21,14 @@ header {
 
 h1 {
     font-size: 4rem;
-    color: #ff005e; /* Неоново-розовый акцент */
+    color: #ff005e; /* Яркий розовый акцент */
     margin: 0;
-    font-family: 'Press Start 2P', sans-serif; /* Геймерский шрифт */
-    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
     text-shadow: 0 0 10px #ff005e, 0 0 20px #ff005e;
 }
 
 .subheader {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #f4f4f4;
     margin-top: 0.5rem;
     text-shadow: 0 0 10px #ff005e;
@@ -46,12 +45,10 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
-    color: #00c9ff; /* Неоново-голубой */
+    font-size: 2rem;
+    color: #00c9ff; /* Голубой акцент */
     margin-bottom: 1rem;
     text-align: center;
-    letter-spacing: 1px;
-    font-family: 'Press Start 2P', sans-serif;
     text-shadow: 0 0 10px #00c9ff;
 }
 
@@ -87,50 +84,11 @@ p {
     transition: opacity 0.3s ease;
 }
 
-.anime-card img:hover {
-    opacity: 0.8;
-}
-
 .anime-card h3 {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #ff005e;
     margin: 0.5rem 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.anime-card p {
-    padding: 0 1rem;
-    font-size: 1rem;
-    color: #cfcfcf;
-}
-
-/* Стили для формы поиска */
-#search-bar, #genre-filter {
-    margin-bottom: 1.5rem;
-    padding: 0.7rem;
-    border: 1px solid #ff005e;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 400px;
-    background-color: #1e1e1e;
-    color: #fff;
-    box-sizing: border-box;
-}
-
-#search-bar::placeholder {
-    color: #cfcfcf;
-}
-
-/* Секция о разработчиках */
-#developers ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#developers li::before {
-    content: "• ";
-    color: #ff005e;
 }
 
 footer {
@@ -144,16 +102,7 @@ footer {
     width: 100%;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Анимации */
-.anime-card img:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
+/* Стили для анимаций */
 header h1 {
     animation: glow 1.5s ease-in-out infinite alternate;
 }
@@ -165,4 +114,8 @@ header h1 {
     to {
         text-shadow: 0 0 20px #ff005e, 0 0 30px #ff005e, 0 0 40px #ff005e;
     }
+}
+
+.anime-card img:hover {
+    opacity: 0.9;
 }
