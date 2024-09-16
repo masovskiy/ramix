@@ -1,62 +1,63 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const animeGrid = document.getElementById("anime-grid");
-    const searchBar = document.getElementById("search-bar");
-    const genreFilter = document.getElementById("genre-filter");
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBar = document.getElementById('search-bar');
+    const genreFilter = document.getElementById('genre-filter');
+    const discordLoginButton = document.getElementById('discord-login');
+    const reviewForm = document.getElementById('review-form');
+    const reviewText = document.getElementById('review-text');
+    const reviewsList = document.getElementById('reviews-list');
 
-    let animeList = [];
+    // Функция фильтрации аниме
+    function filterAnime() {
+        const searchTerm = searchBar.value.toLowerCase();
+        const selectedGenre = genreFilter.value;
 
-    // Загружаем данные из anime.json
-    fetch("data/anime.json")
-        .then(response => response.json())
-        .then(data => {
-            animeList = data;
-            displayAnime(animeList);
-        })
-        .catch(error => {
-            console.error("Ошибка загрузки данных:", error);
-        });
+        document.querySelectorAll('#anime-grid .anime-card').forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const genre = card.dataset.genre;
 
-    // Функция для отображения аниме
-    function displayAnime(animeData) {
-        animeGrid.innerHTML = "";
-        animeData.forEach(anime => {
-            const animeCard = document.createElement("div");
-            animeCard.className = "anime-card";
+            const matchesSearch = title.includes(searchTerm);
+            const matchesGenre = !selectedGenre || genre === selectedGenre;
 
-            animeCard.innerHTML = `
-                <a href="${anime.link}" target="_blank">
-                    <img src="${anime.image}" alt="${anime.title}">
-                </a>
-                <h3><a href="${anime.link}" target="_blank">${anime.title}</a></h3>
-                <p><strong>Год:</strong> ${anime.year}</p>
-                <p><strong>Жанры:</strong> ${anime.genres.join(", ")}</p>
-                <p>${anime.description}</p>
-            `;
-
-            animeGrid.appendChild(animeCard);
+            if (matchesSearch && matchesGenre) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
         });
     }
 
-    // Фильтрация по поиску
-    searchBar.addEventListener("input", function () {
-        const searchText = searchBar.value.toLowerCase();
-        const filteredAnime = animeList.filter(anime =>
-            anime.title.toLowerCase().includes(searchText)
-        );
-        displayAnime(filteredAnime);
+    // Обработчики событий
+    searchBar.addEventListener('input', filterAnime);
+    genreFilter.addEventListener('change', filterAnime);
+
+    // Обработка авторизации через Discord
+    discordLoginButton.addEventListener('click', () => {
+        // Для реальной авторизации вам понадобится серверная часть и интеграция с Discord API
+        alert('Войдите через Discord, чтобы оставить отзыв.');
+        // Имитация успешной авторизации
+        reviewForm.style.display = 'block';
     });
 
-    // Фильтрация по жанрам
-    genreFilter.addEventListener("change", function () {
-        const selectedGenre = genreFilter.value;
+    // Обработка отправки отзыва
+    reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-        if (selectedGenre === "all") {
-            displayAnime(animeList);
-        } else {
-            const filteredAnime = animeList.filter(anime =>
-                anime.genres.includes(selectedGenre)
-            );
-            displayAnime(filteredAnime);
+        const reviewContent = reviewText.value.trim();
+
+        if (reviewContent) {
+            const reviewElement = document.createElement('div');
+            reviewElement.className = 'review';
+            reviewElement.innerHTML = `<p>${sanitize(reviewContent)}</p>`; // XSS защита
+
+            reviewsList.appendChild(reviewElement);
+            reviewText.value = '';
         }
     });
+
+    // Функция для защиты от XSS
+    function sanitize(text) {
+        const element = document.createElement('div');
+        element.innerText = text;
+        return element.innerHTML;
+    }
 });
