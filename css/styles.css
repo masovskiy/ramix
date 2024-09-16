@@ -81,18 +81,19 @@ p {
     margin-top: 1.5rem;
 }
 
+/* Карточки аниме */
 .anime-card {
     background: #1a1a1a; /* Тёмный фон для карточки */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Усиленная тень для карточек */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Плавное изменение обводки */
     border: 2px solid transparent;
 }
 
 .anime-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9); /* Усиленная тень при наведении */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
     border-color: #ff66b2; /* Розовый цвет при наведении */
 }
 
@@ -116,7 +117,7 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Форма поиска */
+/* Форма поиска и фильтрации */
 #search-bar, #genre-filter {
     margin-bottom: 1.5rem;
     padding: 0.7rem;
@@ -131,6 +132,11 @@ p {
 
 #search-bar::placeholder {
     color: #cfcfcf;
+}
+
+/* Фильтр по жанру */
+#genre-filter {
+    margin-bottom: 2rem;
 }
 
 /* Секция разработчиков */
@@ -153,7 +159,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Тень для футера */
 }
 
 footer p {
