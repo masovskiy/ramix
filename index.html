@@ -3,40 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramix — Сайт для просмотра аниме</title>
+    <title>Ramix - Открытый аниме-хаб</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Ramix — Сайт для просмотра аниме</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#anime-list">Аниме</a></li>
-            </ul>
-        </nav>
+        <h1>Ramix - Открытый аниме-хаб!</h1>
+        <p class="subheader">Создан Романом Масовским и Артёмом Рамофым.</p>
     </header>
 
-    <main>
-        <section id="search-section">
-            <input type="text" id="search-bar" placeholder="Поиск аниме..." />
-            <select id="genre-filter">
-                <option value="all">Все жанры</option>
-                <option value="action">Экшен</option>
-                <option value="adventure">Приключения</option>
-                <option value="fantasy">Фэнтези</option>
-                <option value="comedy">Комедия</option>
-            </select>
-        </section>
+    <section id="about">
+        <h2>О проекте</h2>
+        <p>
+            Ramix — это открытый хаб для просмотра и поиска аниме. 
+            Проект был создан с целью объединить любителей аниме и 
+            предоставить удобный интерфейс для поиска любимых аниме-сериалов.
+            Сайт позволяет вам быстро найти интересующее аниме по названию или жанру.
+        </p>
+    </section>
 
-        <section id="anime-list">
-            <h2>Популярные аниме</h2>
-            <div id="anime-grid"></div>
-        </section>
-    </main>
+    <section id="anime-section">
+        <h2>Популярные аниме</h2>
+        <input type="text" id="search-bar" placeholder="Поиск аниме...">
+        <select id="genre-filter">
+            <option value="all">Все жанры</option>
+            <option value="action">Экшен</option>
+            <option value="fantasy">Фэнтези</option>
+            <option value="adventure">Приключения</option>
+            <option value="comedy">Комедия</option>
+            <option value="horror">Ужасы</option>
+        </select>
+        <div id="anime-grid"></div>
+    </section>
+
+    <section id="developers">
+        <h2>О разработчиках</h2>
+        <p>
+            Этот проект был разработан с целью практики веб-программирования и создания полезного ресурса
+            для аниме-сообщества. Ramix был создан благодаря совместным усилиям двух энтузиастов:
+        </p>
+        <ul>
+            <li>Роман Масовский (unimas.maiers) — разработчик фронтенда и создательпроекта.</li>
+            <li>Артём Рамоф (ram_off47) — милый добрый пользователь аниме, соавтор проекта.</li>
+        </ul>
+        <p>
+            Мы использовали современный стек технологий, включая HTML, CSS и JavaScript, а также API для работы с аниме-базами данных. 
+            Проект разрабатывался с открытым исходным кодом и доступен на GitHub.
+        </p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Ramix. Все права защищены.</p>
+        <p>© 2024 Ramix — Все права защищены.</p>
     </footer>
 
     <script src="js/main.js"></script>
