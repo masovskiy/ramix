@@ -47,20 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Фильтрация по жанрам
-   // Фильтрация по жанрам
-     genreFilter.addEventListener("change", function () {
-         const selectedGenre = genreFilter.value;
+    genreFilter.addEventListener("change", function () {
+        const selectedGenre = genreFilter.value;
 
-         if (selectedGenre === "all") {
-             displayAnime(animeList);
-         } else {
-             const filteredAnime = animeList.filter(anime =>
-                 anime.genres.includes(selectedGenre)
-             );
-             displayAnime(filteredAnime);
-         }
-     });
-
-    searchBar.addEventListener('input', filterAnime);
-    genreFilter.addEventListener('change', filterAnime);
+        if (selectedGenre === "all") {
+            displayAnime(animeList);
+        } else {
+            const filteredAnime = animeList.filter(anime =>
+                anime.genres.includes(selectedGenre)
+            );
+            displayAnime(filteredAnime);
+        }
+    });
 });
