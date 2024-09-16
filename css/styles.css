@@ -6,13 +6,13 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
-    background-image: url('https://i.imgur.com/B1KC8ch.jpg'); /* Добавляем фон в стиле киберпанка */
+    background-image: url('https://wallpapercave.com/wp/wp2754319.jpg'); /* Фон с японским и киберпанк стилем */
     background-size: cover;
     background-attachment: fixed;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     text-align: center;
     padding: 2rem 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
@@ -21,23 +21,25 @@ header {
 
 h1 {
     font-size: 4rem;
-    color: #ff005e; /* Неоново-розовый */
+    color: #ff005e; /* Неоново-розовый акцент */
     margin: 0;
     font-family: 'Press Start 2P', sans-serif; /* Геймерский шрифт */
     letter-spacing: 3px;
+    text-shadow: 0 0 10px #ff005e, 0 0 20px #ff005e;
 }
 
 .subheader {
     font-size: 1.3rem;
     color: #f4f4f4;
     margin-top: 0.5rem;
+    text-shadow: 0 0 10px #ff005e;
 }
 
 #about, #anime-section, #developers {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     border-radius: 12px;
     border: 2px solid #ff005e;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
@@ -50,6 +52,7 @@ h2 {
     text-align: center;
     letter-spacing: 1px;
     font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 0 0 10px #00c9ff;
 }
 
 p {
