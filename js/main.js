@@ -24,8 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
             animeCard.className = "anime-card";
 
             animeCard.innerHTML = `
-                <img src="${anime.image}" alt="${anime.title}">
-                <h3>${anime.title}</h3>
+                <a href="${anime.link}" target="_blank">
+                    <img src="${anime.image}" alt="${anime.title}">
+                </a>
+                <h3><a href="${anime.link}" target="_blank">${anime.title}</a></h3>
                 <p><strong>Год:</strong> ${anime.year}</p>
                 <p><strong>Жанры:</strong> ${anime.genres.join(", ")}</p>
                 <p>${anime.description}</p>
